@@ -1,0 +1,274 @@
+/* Hidden Knowledge - Clean Research Interface */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Research Input */
+.research-input {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.research-input h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.research-input p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.query-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.query-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.research-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.research-button:hover:not(:disabled) {
+    background: #2980b9;
+}
+
+.research-button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Keywords */
+.keywords {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.keywords h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.keyword {
+    background: #ecf0f1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #34495e;
+    border: 1px solid #d5dbdb;
+}
+
+/* Search Results */
+.search-results {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.search-results h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.results-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.source-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fdfdfd;
+    transition: box-shadow 0.3s;
+}
+
+.source-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.source-title {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+
+.source-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+.description {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.source-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.archive-link {
+    color: #3498db;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.archive-link:hover {
+    background: #3498db;
+    color: white;
+}
+
+.analyze-button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.analyze-button:hover {
+    background: #d35400;
+}
+
+/* Analysis Panel */
+.analysis-panel {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.analysis-panel h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.entities h4, .keywords-analysis h4 {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.entity-section {
+    margin-bottom: 20px;
+}
+
+.entity-section h5 {
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.entity-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.entity-section li {
+    background: #ecf0f1;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.keyword-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.analysis-keyword {
+    background: #f39c12;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .source-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .source-actions {
+        flex-direction: column;
+    }
+}
